@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Work Experience</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i>  Home</a></li>
+            <li><a href="AboutMe.html"><i class="fas fa-user"></i>  About Me</a></li>
+            <li><a href="WorkExperience.html"><i class="fas fa-briefcase"></i>  Work Experience</a></li>
+            <li><a href="Portfolio.html"><i class="fas fa-pencil-alt"></i>  Portfolio</a></li>
+            <li><a href="Contact.html"><i class="fas fa-envelope"></i>  Contact</a></li>
+        </ul>
+    </nav>
+    <section id="work-header">
+        <h1>Work Experience</h1>
+    </section>
+    <section id="word-bank">
+        <div class="container">
+            <h2>Jump to Job:</h2>
+        <ul>
+            <li><a href="#job1">Justin Jefferson Poster</a></li>
+            <li><a href="#job2">D&D Poster</a></li>
+            <li><a href="#job3">Children's Book Illustration</a></li>
+            <li><a href="#job4">Mountain Mural</a></li>
+        </ul>
+        </div>
+    </section>
+    <section id="job1" class="work-section">
+        <h2>Justin Jefferson Poster</h2>
+        <p><strong>Freelance</strong> | 2024</p>
+        <p>Created an original graphic design poster of Justin Jefferson for a client, using Clip Studio Art.</p>
+    </section>
+
+    <section id="job2" class="work-section">
+        <h2>D&D Poster</h2>
+        <p><strong>Freelance</strong> | 2024</p>
+        <p>Created an original 16"x20" Dungeons and Dragons poster for a client.</p>
+    </section>
+
+    <section id="job3" class="work-section">
+        <h2>Children's Book Illustration</h2>
+        <p><strong>Freelance</strong> | 2023</p>
+        <p>Created original digital artwork illustrations for a client's children's book.</p>
+    </section>
+
+    <section id="job4" class="work-section">
+        <h2>Mountain Mural</h2>
+        <p><strong>McNicholas Highschool</strong> | 2023</p>
+        <p>Created a 6'x12' spray paint mural the highschool's Earth Day event.</p>
+    </section>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

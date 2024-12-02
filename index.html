@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Index</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i>  Home</a></li>
+            <li><a href="AboutMe.html"><i class="fas fa-user"></i>  About Me</a></li>
+            <li><a href="WorkExperience.html"><i class="fas fa-briefcase"></i>  Work Experience</a></li>
+            <li><a href="Portfolio.html"><i class="fas fa-pencil-alt"></i>  Portfolio</a></li>
+            <li><a href="Contact.html"><i class="fas fa-envelope"></i>  Contact</a></li>
+        </ul>
+    </nav>
+    <br><br>
+    <header id="home">
+        <div class="container">
+            <div class="image-section">
+                <img src="Images/Me.jpeg" alt="Me" class="home-image">
+            </div>
+            
+            <div class="text-section">
+                <h1>Welcome to My Portfolio</h1>
+                <p>I am a 3D Designer with a passion for sports and digital artistry. Explore my work and get to know me better.</p>
+
+
+                <div class="cta-buttons">
+                    <a href="portfolio.html" class="cta-button">See My Work</a>
+                    <a href="AboutMe.html" class="cta-button">About Me</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <script src="Images/Me.jpeg" alt="Me" class="home-image"></script>
+      <script src="Images/Me.jpeg" alt="Me" class="home-image">
+        const images = document.querySelectorAll('#portfolio .photo-container img');
+        const modal = document.getElementById('modal');
+        const modalImage = modal.querySelector('img');
+        const closeButton = modal.querySelector('.close-btn');
+
+        images.forEach(image => {
+        image.addEventListener('click', function() {
+            modal.style.display = 'flex';
+            modalImage.src = this.src;
+        });
+        });
+
+        closeButton.addEventListener('click', function() {
+        modal.style.display = 'none';
+        });
+        modalImage.addEventListener('click', function(event) {
+        event.stopPropagation();
+        });
+      </script>
+      
+    
+</body>
+</html>

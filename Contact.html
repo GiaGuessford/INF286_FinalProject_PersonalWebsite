@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i>  Home</a></li>
+            <li><a href="AboutMe.html"><i class="fas fa-user"></i>  About Me</a></li>
+            <li><a href="WorkExperience.html"><i class="fas fa-briefcase"></i>  Work Experience</a></li>
+            <li><a href="Portfolio.html"><i class="fas fa-pencil-alt"></i>  Portfolio</a></li>
+            <li><a href="Contact.html"><i class="fas fa-envelope"></i>  Contact</a></li>
+        </ul>
+    </nav>
+    <section id="contact">
+        <form id="contactForm">
+            <table class="contact-table">
+                <tr class="header-row">
+                    <td colspan="2">
+                        <h1>Contact Me</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="subject">Subject:</label></td>
+                    <td><input type="text" id="subject" name="subject" required></td>
+                </tr>
+                <tr>
+                    <td><label for="message">Message:</label></td>
+                    <td><textarea id="message" name="message" rows="5" required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="submit-row">
+                        <button type="submit">Send Message</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();  
+            
+            alert("Form Submitted!");  
+            
+            window.location.href = "ThankYou.html";
+        });
+    </script>
+</body>
+</html>

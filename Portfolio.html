@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i>  Home</a></li>
+            <li><a href="AboutMe.html"><i class="fas fa-user"></i>  About Me</a></li>
+            <li><a href="WorkExperience.html"><i class="fas fa-briefcase"></i>  Work Experience</a></li>
+            <li><a href="Portfolio.html"><i class="fas fa-pencil-alt"></i>  Portfolio</a></li>
+            <li><a href="Contact.html"><i class="fas fa-envelope"></i>  Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="portfolio-header">
+        <h1>Portfolio</h1>
+    </section>
+    
+    <section id="portfolio-images">
+        
+            <div class="image-item">
+                <img src="images/Bengals.jpeg" alt="Bengals" class="portfolio-img">
+                <p>Bengals Wallpaper</p>
+            </div>
+            <div class="image-item">
+                <img src="images/JaireAlexander.jpeg" alt="Jaire Alexander Design" class="portfolio-img">
+                <p>Jaire Alexander Poster</p>
+            </div>
+            <div class="image-item">
+                <img src="images/JustinJefferson.jpeg" alt="Justin Jefferson Design" class="portfolio-img">
+                <p>Justin Jefferson Poster</p>
+            </div>
+        
+        
+        
+            <div class="image-item">
+                <img src="images/OleMissWallpaper.jpeg" alt="Ole Miss Design" class="portfolio-img">
+                <p>Ole Miss wallpaper</p>
+            </div>
+            <div class="image-item">
+                <img src="images/Squirrel.jpeg" alt="Squirrel Design" class="portfolio-img">
+                <p>Squirrel Wallpaper</p>
+            </div>
+            <div class="image-item">
+                <img src="images/Uno.jpeg" alt="Uno Design" class="portfolio-img">
+                <p>Uno Poster</p>
+            </div>
+        
+        
+        <div id="imageModal" class="modal">
+            <span class="close-btn">&times;</span>
+            <img id="expandedImg" class="expanded-img">
+        </div>
+    </section>
+
+    <script>
+        var modal = document.getElementById("imageModal");
+        var images = document.querySelectorAll('.portfolio-img');
+        var expandedImg = document.getElementById("expandedImg");
+
+        images.forEach(image => {
+            image.onclick = function() {
+                expandedImg.src = this.src;
+                modal.style.display = "block";
+            };
+        });
+
+        var closeButton = document.getElementsByClassName("close-btn")[0];
+        closeButton.onclick = function() {
+            modal.style.display = "none";
+        };
+    </script>
+</body>
+</html>
